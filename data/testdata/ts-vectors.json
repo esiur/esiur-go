@@ -1,0 +1,292 @@
+[
+  {
+    "name": "null",
+    "python": "None",
+    "hex": "00"
+  },
+  {
+    "name": "true",
+    "python": "True",
+    "hex": "02"
+  },
+  {
+    "name": "int_300",
+    "python": "300",
+    "hex": "112c01"
+  },
+  {
+    "name": "int_neg_70000",
+    "python": "-70000",
+    "hex": "1990eefeff"
+  },
+  {
+    "name": "int_int32_max",
+    "python": "2147483647",
+    "hex": "19ffffff7f"
+  },
+  {
+    "name": "int_int32_over",
+    "python": "2147483648",
+    "hex": "210000008000000000"
+  },
+  {
+    "name": "int_i64_min",
+    "python": "-(2**63)",
+    "hex": "210000000000000080"
+  },
+  {
+    "name": "double_integral_huge",
+    "python": "1e10",
+    "hex": "1af9021550"
+  },
+  {
+    "name": "double_pi",
+    "python": "3.141592653589793",
+    "hex": "22182d4454fb210940"
+  },
+  {
+    "name": "double_f32_exact",
+    "python": "0.5",
+    "hex": "1a0000003f"
+  },
+  {
+    "name": "double_neg_zero",
+    "python": "0.0",
+    "hex": "0900"
+  },
+  {
+    "name": "string_unicode",
+    "python": "\"héllo ✓ 你好\"",
+    "hex": "491168c3a96c6c6f20e29c9320e4bda0e5a5bd"
+  },
+  {
+    "name": "raw_300",
+    "python": "bytes([7]) * 300",
+    "hex": "50012c070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707070707"
+  },
+  {
+    "name": "list_mixed",
+    "python": "[1, \"a\", None, True, 2.5]",
+    "hex": "4a0c090149016100021a00002040"
+  },
+  {
+    "name": "list_nested",
+    "python": "[[1, 2], [3, [4, \"x\"]]]",
+    "hex": "4a114a04090109024a0909034a050904490178"
+  },
+  {
+    "name": "list_empty",
+    "python": "[]",
+    "hex": "42"
+  },
+  {
+    "name": "map_simple",
+    "python": "{\"a\": 1, \"b\": [True]}",
+    "hex": "4e0b49016109014901624a0102"
+  },
+  {
+    "name": "map_int_keys",
+    "python": "{1: \"x\", 2: \"y\"}",
+    "hex": "4e0a09014901780902490179"
+  },
+  {
+    "name": "u8_200",
+    "python": "UInt8(200)",
+    "hex": "08c8"
+  },
+  {
+    "name": "u16_70000_is_u32",
+    "python": "UInt32(70000)",
+    "hex": "1870110100"
+  },
+  {
+    "name": "u64_big",
+    "python": "UInt64(2**63 + 5)",
+    "hex": "200500000000000080"
+  },
+  {
+    "name": "i8_neg",
+    "python": "Int8(-3)",
+    "hex": "09fd"
+  },
+  {
+    "name": "i16_200",
+    "python": "Int16(200)",
+    "hex": "11c800"
+  },
+  {
+    "name": "f32_1p1",
+    "python": "Float32(1.1)",
+    "hex": "1acdcc8c3f"
+  },
+  {
+    "name": "char16_z",
+    "python": "Char16.of(\"z\")",
+    "hex": "127a00"
+  },
+  {
+    "name": "decimal_1p50",
+    "python": "Decimal(\"1.50\")",
+    "hex": "2a00000200000000009600000000000000"
+  },
+  {
+    "name": "decimal_neg",
+    "python": "Decimal(\"-0.0000000000000000000000000001\")",
+    "hex": "2a00001c80000000000100000000000000"
+  },
+  {
+    "name": "decimal_whole",
+    "python": "Decimal(\"42\")",
+    "hex": "092a"
+  },
+  {
+    "name": "datetime",
+    "python": "datetime(1999, 12, 31, 23, 59, 59, 123000, tzinfo=timezone.utc)",
+    "hex": "23306e5e470222c108"
+  },
+  {
+    "name": "datetime_pre_1970",
+    "python": "datetime(1901, 1, 1, tzinfo=timezone.utc)",
+    "hex": "2300001e9924245208"
+  },
+  {
+    "name": "uuid",
+    "python": "UUID(bytes=bytes(range(1, 17)))",
+    "hex": "2b0102030405060708090a0b0c0d0e0f10"
+  },
+  {
+    "name": "tru_i32",
+    "python": "t.i32",
+    "hex": "8a0109"
+  },
+  {
+    "name": "tru_nullable_list",
+    "python": "t.nullable(t.list(t.string))",
+    "hex": "8a02c812"
+  },
+  {
+    "name": "tru_map_of_nullable",
+    "python": "t.map(t.string, t.nullable(t.i32))",
+    "hex": "8a03511289"
+  },
+  {
+    "name": "tru_tuple3",
+    "python": "t.tuple(t.u8, t.list(t.f64), t.bool)",
+    "hex": "8a055803480d02"
+  },
+  {
+    "name": "typed_list_i32",
+    "python": "TypedList(t.i32, [1, -2, 300, 70000, -5])",
+    "hex": "880c4809020381580282e0220209"
+  },
+  {
+    "name": "typed_list_i16_zigzag",
+    "python": "TypedList(t.i16, [0, -1, 63, -64, 64, 32767, -32768])",
+    "hex": "880d480700017e7f808083feffffff"
+  },
+  {
+    "name": "typed_list_i16_long_run",
+    "python": "TypedList(t.i16, [i * 300 - 10000 for i in range(100)])",
+    "hex": "88cd4807c11f4ec74b6f491747bf4467420f40b73d5f3b0739af365734ff31a72f4f2df72a9f284726ef2397213f1fe71c8f1a3718df1587132f11d70e7f0c270acf0777051f0380c7f9059001e80340069808f00a480da00ff8115014a8160019581bb01d08206022b82410276829c02b182e7030c83220357837d039283c803ed84030438845e047384a904ce84e40519853f0554858a05af85c505fa86100645866b068086b606db86f10726874c0761879707bc87d20807882d08428878089d88b308e8890e09238959097e899"
+  },
+  {
+    "name": "typed_list_u16_long_literals",
+    "python": "TypedList(t.u16, [i % 100 for i in range(300)])",
+    "hex": "90012e4806000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f404142434445464748494a4b4c4d4e4f505152535455565758595a5b5c5d5e5f60616263000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f404142434445464748494a4b4c4d4e4f505152535455565758595a5b5c5d5e5f60616263000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f404142434445464748494a4b4c4d4e4f505152535455565758595a5b5c5d5e5f60616263"
+  },
+  {
+    "name": "typed_list_u32",
+    "python": "TypedList(t.u32, [0, 255, 256, 65536, 4294967295])",
+    "hex": "881148080080ff8100018200000183ffffffff"
+  },
+  {
+    "name": "typed_list_i64",
+    "python": "TypedList(t.i64, [1, -(2**40), 2**62, -5])",
+    "hex": "8814480c0285ffffffffff0187000000000000008009"
+  },
+  {
+    "name": "typed_list_u64",
+    "python": "TypedList(t.u64, [1, 2**40, 2**63 + 7, 5])",
+    "hex": "8814480b018500000000000187070000000000008005"
+  },
+  {
+    "name": "typed_list_u64_huge_run",
+    "python": "TypedList(t.u64, [2**40 + i for i in range(20)])",
+    "hex": "887c480be5070000000000010100000000010200000000010300000000010400000000010500000000010600000000010700000000010800000000010900000000010a00000000010b00000000010c00000000010d00000000010e00000000010f0000000001100000000001110000000001120000000001130000000001"
+  },
+  {
+    "name": "typed_list_empty",
+    "python": "TypedList(t.i32, [])",
+    "hex": "88024809"
+  },
+  {
+    "name": "typed_list_u8",
+    "python": "TypedList(t.u8, [1, 2, 200])",
+    "hex": "880848030801080208c8"
+  },
+  {
+    "name": "typed_list_i8",
+    "python": "TypedList(t.i8, [-1, 2, -128])",
+    "hex": "8808480409ff09020980"
+  },
+  {
+    "name": "typed_list_char",
+    "python": "TypedList(t.char, [97, 98, 0x4e2d])",
+    "hex": "880b4805126100126200122d4e"
+  },
+  {
+    "name": "typed_list_string",
+    "python": "TypedList(t.string, [\"a\", \"bb\", \"\"])",
+    "hex": "880a48124901614902626241"
+  },
+  {
+    "name": "typed_list_dynamic",
+    "python": "TypedList(t.dynamic, [1, \"x\", None, [2]])",
+    "hex": "880c48010901490178004a020902"
+  },
+  {
+    "name": "typed_list_f64",
+    "python": "TypedList(t.f64, [1.5, 2, 3.25])",
+    "hex": "880e480d1a0000c03f09021a00005040"
+  },
+  {
+    "name": "typed_list_of_typed_lists",
+    "python": "TypedList(t.list(t.i32), [TypedList(t.i32, [1, 2]), TypedList(t.i32, [3])])",
+    "hex": "880a484809c9020204c90106"
+  },
+  {
+    "name": "typed_map_string_i32",
+    "python": "TypedMap(t.string, t.i32, {\"a\": 1, \"b\": 300})",
+    "hex": "8811511209c906490161490162c90402815802"
+  },
+  {
+    "name": "typed_map_u8_dynamic",
+    "python": "TypedMap(t.u8, t.dynamic, {1: \"x\", 2: [1, 2]})",
+    "hex": "8814510301c90408010802c9094901784a0409010902"
+  },
+  {
+    "name": "typed_map_empty",
+    "python": "TypedMap(t.string, t.string, {})",
+    "hex": "8805511212c1c1"
+  },
+  {
+    "name": "typed_tuple2",
+    "python": "TypedTuple([t.i32, t.string], (1, \"a\"))",
+    "hex": "88085009120901490161"
+  },
+  {
+    "name": "typed_tuple3_nested",
+    "python": "TypedTuple([t.list(t.i32), t.bool, t.f64], (TypedList(t.i32, [1]), True, 2.5))",
+    "hex": "880e584809020dc90102021a00002040"
+  },
+  {
+    "name": "list_of_same_typed_lists",
+    "python": "[TypedList(t.i32, [1]), TypedList(t.i32, [2, 3]), TypedList(t.i32, [])]",
+    "hex": "4a0a8803480902c8020406c0"
+  },
+  {
+    "name": "list_of_mixed_typed_lists",
+    "python": "[TypedList(t.i32, [1]), TypedList(t.string, [\"a\"]), TypedList(t.string, [\"b\"])]",
+    "hex": "4a11880348090288054812490161c803490162"
+  }
+]

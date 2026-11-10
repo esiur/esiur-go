@@ -1,0 +1,167 @@
+{
+  "vectors": [
+    {
+      "name": "typedef_minimal",
+      "python": "TypeDefInfo(id=1, name=\"Point\", kind=TypeDefKind.RECORD)",
+      "hex": "891e881c510301c9080800080108020804c90d090008014905506f696e740801"
+    },
+    {
+      "name": "typedef_full_resource",
+      "python": "TypeDefInfo(version=3, id=7, name=\"Sensor\", namespace=\"Acme.Devices\", kind=TypeDefKind.RESOURCE, parent=2, signature=0x1122334455667788, usage=\"u\", description=\"A sensor\", example=[1, \"x\"], category=\"iot\", since=\"3.2\", annotations={\"owner\": \"ops\", \"tier\": \"gold\"}, properties=[PropertyDefInfo(index=0, name=\"temperature\", flags=0x04, value_type=t.f64, description=\"deg C\", unit=\"C\", minimum=-40, maximum=125, effects=0, ordering_control=2, history_control=1, default_value=20.5, tags=[\"a\", \"b\"], related_members=[1, 2], annotations={\"k\": \"v\"}), PropertyDefInfo(index=1, name=\"label\", flags=0, value_type=t.nullable(t.string)), PropertyDefInfo(index=2, name=\"readings\", flags=0x22, value_type=t.list(t.map(t.string, t.i32)))], functions=[FunctionDefInfo(index=0, name=\"calibrate\", flags=0x14, return_type=t.bool, stream_mode=1, effects=0x11, preconditions=[\"idle\"], warnings=[\"slow\"], deprecation_message=\"use x\", arguments=[ArgumentDefInfo(index=0, name=\"offset\", flags=0, value_type=t.f64), ArgumentDefInfo(index=1, name=\"mode\", flags=3, value_type=t.string, default_value=\"auto\")]), FunctionDefInfo(index=1, name=\"reset\", flags=0)], events=[EventDefInfo(index=0, name=\"changed\", flags=0x04, argument_type=t.f64, argument_name=\"value\", ordering_control=1, history_control=2)], constants=[ConstantDefInfo(index=0, name=\"MaxRate\", flags=0, value_type=t.u16, value=1000), ConstantDefInfo(index=1, name=\"Unit\", flags=2, value_type=t.string, value=\"C\")])",
+      "hex": "910295900292510301c9220800080108020803080408050806080708080809080a082008210822082308240825d1026809030807490653656e736f72490c41636d652e44657669636573080008024ac08868510301c91e080008010802080308040805080608200823082408250826082c082e0830c9430900490b74656d706572617475726509048a010d090209011a0000a441490564656720434a0649016149016249014309d8097d09004a04090109024e0649016b490176c826c90e080008010802080308040805082cc914090149056c6162656c09008a0192090009000900c82cc90e080008010802080308040805082cc91a0902490872656164696e677309228a04485112090900090009004ab68895510301c914080008010802080308040805082a082c082d082fc97a0900490963616c69627261746509144a4b8822510301c90a0800080108020803082cc911090049066f666673657409008a010d0900c825c90c08000801080208030804082cc915090149046d6f646509038a011249046175746f09008a010209014a06490469646c6509114a064904736c6f7749057573652078c81dc90a0800080108020805082cc90f0901490572657365740900090009004a368834510301c9100800080108020803080408050806082cc91d090049076368616e67656409048a010d490576616c75650901090209004a4e8828510301c90c08000801080208030804082cc915090049074d61785261746509008a010611e8030900c822c90c08000801080208030804082cc91209014904556e697409028a011249014309002088776655443322114901754908412073656e736f724a0509014901784903696f744903332e32881f511212c90d49056f776e6572490474696572c90b49036f70734904676f6c64"
+    },
+    {
+      "name": "typedef_with_type_references",
+      "python": "TypeDefInfo(id=9, name=\"Holder\", kind=TypeDefKind.RESOURCE, properties=[PropertyDefInfo(index=0, name=\"a\", value_type=TruTypeDef(3)), PropertyDefInfo(index=1, name=\"b\", value_type=t.nullable(TruTypeDef(300))), PropertyDefInfo(index=2, name=\"c\", value_type=t.list(TruTypeDef(70000)))])",
+      "hex": "899a8898510301c90a08000801080208040806c987090008094906486f6c64657208004a778826510301c90e080008010802080308040805082cc911090049016109008a024003090009000900c824c90e080008010802080308040805082cc912090149016209008a03c22c01090009000900c827c90e080008010802080308040805082cc915090249016309008a06484470110100090009000900"
+    },
+    {
+      "name": "typedef_enum",
+      "python": "TypeDefInfo(id=2, name=\"Color\", kind=TypeDefKind.ENUM, constants=[ConstantDefInfo(index=0, name=\"Red\", value=0), ConstantDefInfo(index=1, name=\"Green\", value=1), ConstantDefInfo(index=2, name=\"Blue\", value=2)])",
+      "hex": "897f887d510301c90a08000801080208040809c96c090008024905436f6c6f7208024a5d881e510301c90a0800080108020804082cc90d09004903526564090009000900c81dc90a0800080108020804082cc90f09014905477265656e090009010900c81cc90a0800080108020804082cc90e09024904426c7565090009020900"
+    },
+    {
+      "name": "list_of_typedefs",
+      "python": "[TypeDefInfo(id=1, name=\"A\", kind=TypeDefKind.RECORD), TypeDefInfo(id=2, name=\"B\", kind=TypeDefKind.RECORD)]",
+      "hex": "4a38891a8818510301c9080800080108020804c909090008014901410801c81a8818510301c9080800080108020804c909090008024901420801"
+    },
+    {
+      "name": "record_point",
+      "python": "Point(3, 4)",
+      "hex": "8806400109030904",
+      "types": [
+        "Point"
+      ]
+    },
+    {
+      "name": "record_point_big_id_values",
+      "python": "Point(70000, -5)",
+      "hex": "88094001197011010009fb",
+      "types": [
+        "Point"
+      ]
+    },
+    {
+      "name": "record_path_dynamic_list",
+      "python": "Path(\"seg\", [1, 2, 3])",
+      "hex": "880f400149037365674a06090109020903",
+      "types": [
+        "Path"
+      ]
+    },
+    {
+      "name": "record_path_typed_list",
+      "python": "Path(\"seg\", TypedList(t.i32, [1, 2, 3]))",
+      "hex": "880c40014903736567c903020406",
+      "types": [
+        "Path"
+      ]
+    },
+    {
+      "name": "record_mixed_nulls",
+      "python": "Mixed(None, None, 0.5)",
+      "hex": "8809400100001a0000003f",
+      "types": [
+        "Mixed"
+      ]
+    },
+    {
+      "name": "record_mixed_filled",
+      "python": "Mixed(\"hi\", {\"a\": [1, 2]}, 2.25)",
+      "hex": "88164001490268694e094901614a04090109021a00001040",
+      "types": [
+        "Mixed"
+      ]
+    },
+    {
+      "name": "record_in_list_continuation",
+      "python": "[Point(1, 2), Point(3, 4), Point(5, 6)]",
+      "hex": "4a148806400109010902c80409030904c80409050906",
+      "types": [
+        "Point"
+      ]
+    },
+    {
+      "name": "record_nested_in_dynamic_property",
+      "python": "Mixed(\"n\", Point(7, 8), 1.5)",
+      "hex": "8812400149016e88064002090709081a0000c03f",
+      "types": [
+        "Mixed",
+        "Point"
+      ]
+    },
+    {
+      "name": "enum_green",
+      "python": "Color.GREEN",
+      "hex": "8803400101",
+      "types": [
+        "Color"
+      ]
+    },
+    {
+      "name": "enum_in_list",
+      "python": "[Color.RED, Color.BLUE, Color.BLUE]",
+      "hex": "4a0b8803400100c80102c80102",
+      "types": [
+        "Color"
+      ]
+    },
+    {
+      "name": "enum_and_record_ids",
+      "python": "[Point(1, 1), Color.RED]",
+      "hex": "4a0d88064001090109018803400200",
+      "types": [
+        "Point",
+        "Color"
+      ]
+    },
+    {
+      "name": "enum_then_record_ids",
+      "python": "[Color.RED, Point(1, 1)]",
+      "hex": "4a0d88034001008806400209010901",
+      "types": [
+        "Color",
+        "Point"
+      ]
+    },
+    {
+      "name": "map_of_records",
+      "python": "{\"p\": Point(2, 3)}",
+      "hex": "4e0b4901708806400109020903",
+      "types": [
+        "Point"
+      ]
+    }
+  ],
+  "signatures": [
+    {
+      "name": "signature_with_references",
+      "python": "TypeDefInfo(id=9, name=\"Holder\", kind=TypeDefKind.RESOURCE, parent=2, properties=[PropertyDefInfo(index=0, name=\"a\", value_type=TruTypeDef(3)), PropertyDefInfo(index=1, name=\"b\", value_type=t.nullable(TruTypeDef(300))), PropertyDefInfo(index=2, name=\"c\", value_type=t.list(TruTypeDef(70000)))])",
+      "signature": "8687632316563373257"
+    },
+    {
+      "name": "signature_plain",
+      "python": "TypeDefInfo(id=5, name=\"Plain\", kind=TypeDefKind.RECORD, properties=[PropertyDefInfo(index=0, name=\"x\", value_type=t.i32)])",
+      "signature": "1074907781923192710"
+    },
+    {
+      "name": "signature_unknown_parent",
+      "python": "TypeDefInfo(id=5, name=\"Orphan\", kind=TypeDefKind.RESOURCE, parent=99)",
+      "signature": "2886809645204483005"
+    }
+  ],
+  "names": [
+    {
+      "name": "Alpha",
+      "name64": "11730395191871121841"
+    },
+    {
+      "name": "",
+      "name64": "1449310910991872227"
+    },
+    {
+      "name": "héllo",
+      "name64": "5010828037090527292"
+    }
+  ]
+}
