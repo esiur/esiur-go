@@ -1,5 +1,8 @@
 # Esiur for Go
 
+[![CI](https://github.com/esiur/esiur-go/actions/workflows/ci.yml/badge.svg)](https://github.com/esiur/esiur-go/actions/workflows/ci.yml)
+[![Go Reference](https://pkg.go.dev/badge/github.com/esiur/esiur-go.svg)](https://pkg.go.dev/github.com/esiur/esiur-go)
+
 Go implementation of Esiur v3, a distributed resource framework for real-time properties,
 asynchronous function invocation and events over the Esiur EP protocol. It is a port of
 [esiur-ts](https://github.com/esiur/esiur-ts) (following the layering of
